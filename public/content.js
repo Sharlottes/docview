@@ -1,6 +1,3 @@
-const Client_ID = '4ciVPlQubDSM6dXLi_xn';
-const Client_Secret = 'DdhaaKWO4B';
-
 function findClickedWord(parentElt, x, y) {
   if (!(parentElt && parentElt.nodeName === '#text')) return;
 
