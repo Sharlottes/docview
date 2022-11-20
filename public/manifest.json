@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Document View Extension",
+  "description": "search the word on cursor in document and show it. prividing additional description and hyperlink for more info",
+  "version": "1.0",
+  "icons": {
+    "128": "128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["inject.js"],
+    "all_frames": true
+  }],
+ "web_accessible_resources": [{
+    "resources": ["content.js"],   
+    "matches": ["http://*/*", "https://*/*"]
+  }],
+  "action": {
+      "default_title": "Document View",
+      "default_popup": "index.html",
+      "default_icon": "128.png"
+  },
+  "permissions": ["activeTab"]
+}
