@@ -7,15 +7,15 @@
     "128": "128.png"
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "scripts/background.js"
   },
   "content_scripts": [{
     "matches": ["http://*/*", "https://*/*"],
-    "js": ["inject.js"],
+    "js": ["scripts/inject.js"],
     "all_frames": true
   }],
  "web_accessible_resources": [{
-    "resources": ["content.js"],   
+    "resources": ["scripts/content.js"],   
     "matches": ["http://*/*", "https://*/*"]
   }],
   "action": {
